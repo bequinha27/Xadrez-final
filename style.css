@@ -1,26 +1,36 @@
 #tabuleiro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 418px;
-    /* Ajuste o tamanho conforme necessário */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 400px; /* Define o tamanho do tabuleiro */
+    height: 400px; /* Tabuleiro quadrado */
+    border: 2px solid black; /* Borda ao redor do tabuleiro */
 }
 
 .casa {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    font-size: 39px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 35px; /* Tamanho ajustado para as peças */
+    box-sizing: border-box;
+    border: 1px solid black; /* Separadores entre casas */
 }
 
-/* Criando o padrão de cores do tabuleiro */
 .casa.clara {
-    background-color: #f0f0f0;
-    /* Cor clara */
+    background-color: #f0d9b5; /* Cor clara padrão */
 }
 
 .casa.escura {
-    background-color: #808080;
-    /* Cor escura */
+    background-color: #b58863; /* Cor escura padrão */
+}
+
+.casa.selecionada {
+    outline: 3px solid #ffcc00; /* Destaque para a peça selecionada */
+    z-index: 1; /* Garante que o destaque fique sobreposto */
+}
+
+.casa.destacado {
+    outline: 3px dashed #00ff00; /* Cor para destacar casas válidas */
 }
