@@ -1,0 +1,26 @@
+#tabuleiro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 418px;
+    /* Ajuste o tamanho conforme necessário */
+}
+
+.casa {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 39px;
+    text-align: center;
+}
+
+/* Criando o padrão de cores do tabuleiro */
+.casa.clara {
+    background-color: #f0f0f0;
+    /* Cor clara */
+}
+
+.casa.escura {
+    background-color: #808080;
+    /* Cor escura */
+}
